@@ -1,0 +1,126 @@
+.form {
+  max-width: 650px;
+  width: 100%;
+  background: #fff;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.item {
+  background: #dedede;
+  border-radius: 10px;
+
+  margin-bottom: 5px;
+}
+.item:first-child {
+  background: #fff;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  color: #8f662b;
+  cursor: pointer;
+  border-radius: 10px;
+  background: linear-gradient(#fdc401, #eea40e);
+}
+
+.title h2 {
+  margin-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  filter: drop-shadow(1px 1px 1px #686868);
+}
+
+.content {
+  color: #8b7f75;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.content.show {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+label {
+  display: block;
+  font-family: "Helvetica Neue";
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 4px;
+}
+
+input {
+  height: 40px;
+  width: 220px;
+  border-radius: 10px;
+  border: none;
+  margin: 0 15px -10px 0;
+  box-shadow: inset 0 0 5px 2px #b8b8b8;
+}
+input:focus {
+  outline: none;
+}
+textarea,
+input[type] {
+  font-size: 16px;
+  padding: 0 10px;
+}
+.form-control {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+}
+select {
+  height: 40px;
+  width: 160px;
+  border-radius: 10px;
+  border: none;
+  margin: 0 15px -10px 0;
+  box-shadow: inset 0 0 10px 5px #b8b8b8;
+  padding: 10px;
+}
+.caret {
+  margin-right: 8px;
+}
+.next-button {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 10px 10px 0;
+}
+
+.next-button .button {
+  font-family: sans-serif;
+  font-size: 16px;
+  background: linear-gradient(#424cb4, #7362ce);
+  padding: 8px 50px;
+  border-radius: 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.form-control:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+  appearance: none;
+  border: none;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 15px -10px 0;
+  box-shadow: inset 0 0 5px 2px #b8b8b8;
+}
+
+p span {
+  font-size: 14px;
+  color: red;
+}
