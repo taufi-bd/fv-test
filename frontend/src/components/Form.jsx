@@ -18,6 +18,7 @@ const schema = yup.object().shape({
 export default function Form() {
   const [formStep, setFormStep] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
+  const [disable, setDisable] = useState(false);
   const {
     register,
     handleSubmit,
@@ -34,6 +35,7 @@ export default function Form() {
   };
 
   const onSubmit = async (data, e) => {
+    setDisable(true);
     setIsLoading(true);
     await fetch("https://taufikur-rahman.com/projects/fv-api/public/api/data", {
       method: "POST",
@@ -169,7 +171,7 @@ export default function Form() {
               </div>
               <div>
                 <div className="next-button">
-                  <button type="submit" className="button">
+                  <button disabled={disable} type="submit" className="button">
                     {isLoading ? "Sending" : "Next >"}
                   </button>
                 </div>
